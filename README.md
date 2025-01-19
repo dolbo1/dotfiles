@@ -9,3 +9,5 @@ This is a storage for backup files of my configurations, mostly within Arch Linu
 - File manager: Nemo
 - App menu: Wofi
 - Colorscheme: Sonokai, Retrowave (custom - sonokai-inspired)
+
+![Screenshot of the desktop](screenshot.png)
