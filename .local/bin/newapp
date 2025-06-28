@@ -1,0 +1,12 @@
+#!/bin/bash
+
+NEW_SHORTCUT=""
+NEW_SHORTCUT+="[Desktop Entry]\n"
+NEW_SHORTCUT+="Encoding=UTF-8\n"
+NEW_SHORTCUT+="Version=1.0\n"
+NEW_SHORTCUT+="Type=Application\n"
+NEW_SHORTCUT+="NoDisplay=false\n"
+NEW_SHORTCUT+="Exec=/usr/bin/$1\n"
+NEW_SHORTCUT+="Name=${1^}\n"
+NEW_SHORTCUT+="Icon=$1"
+echo -e "$NEW_SHORTCUT" > "$HOME/.local/share/applications/$1.desktop"

@@ -1,0 +1,52 @@
+#!/bin/bash
+clear
+echo "
+ ████████╗██╗  ██╗███████╗███╗   ███╗███████╗███████╗
+ ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝██╔════╝
+    ██║   ███████║█████╗  ██╔████╔██║█████╗  ███████╗
+    ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  ╚════██║
+    ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗███████║
+    ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝╚══════╝
+
+Current themes include:
+- Gruvbox
+- Retrowave
+(CTRL + C or 'quit' to quit)
+"
+
+read -p "> " COLORSCHEME
+
+if [[ $COLORSCHEME == "quit" ]]; then
+   exit 0
+fi
+
+WORK_DIR="$HOME/.config/colors"
+echo -e "\nIs this your 'colors' directory? $WORK_DIR (y/n)"
+read -p "> " YES_NO
+
+if [[ $YES_NO == "n" ]]; then
+   echo -e "\nEnter a new 'colors' directory. (DO NOT END WITH A /)"
+   read -p "> " WORK_DIR
+fi
+
+if [[ -d "$WORK_DIR/${COLORSCHEME,,}" ]]; then
+   FILEPATH=$WORK_DIR/${COLORSCHEME,,} # ,, makes lowercase
+   echo ""
+   # Hyprland
+   echo "Updating Hyprland config..."
+   sed -i "1 s|.*|source = $FILEPATH/hypr.conf|" "$HOME/.config/hypr/hyprland.conf" | grep -i "source" # ,, creates lowercase string
+
+   # Hyprlock
+   echo "Updating Hyprlock config..."
+   sed -i "1 s|.*|source = $FILEPATH/hypr.conf|" "$HOME/.config/hypr/hyprlock.conf" | grep -i "source" # ,, creates lowercase string
+
+   # Waybar
+   echo "Updating Waybar stylesheet..."
+   sed -i "2 s|.*|@import url("\"$FILEPATH/waybar.css\"");|" "$HOME/.config/waybar/style.css" | grep -i "@import" # ,, creates lowercase string
+
+   # Rofi
+   echo "Updating Rofi stylesheet..."
+   sed -i "1 s|.*|@import "\"$FILEPATH/rofi.rasi\""|" "$HOME/.config/rofi/custom-theme.rasi" | grep -i "@import" # ,, creates lowercase string
+else
+   echo "Colorscheme '$COLORSCHEME' does not exist in $WORK_DIR."
+fi

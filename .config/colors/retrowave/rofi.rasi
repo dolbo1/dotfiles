@@ -1,0 +1,9 @@
+* {
+    // Variables
+    bg: #343434;
+    bgdark: #282828; // search bar
+    highlight: #a53156;
+    highlightdark: #bd2f4b; // certain accents
+    text: #fff;
+    inactivetext: #71805b;
+}

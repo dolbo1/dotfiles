@@ -1,0 +1,104 @@
+/* vim: set filetype=less : */
+@import url("/home/aliaks/.config/colors/gruvbox/waybar.css");
+
+* {
+    font-family: JetBrains Mono, "Font Awesome 6 Pro Solid", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: rgba(35, 35, 35, 0.75);
+    border: 3px solid @highlight;
+    border-radius: 100px;
+    color: @text;
+}
+
+tooltip {
+    border: 3px solid @highlight;
+    background-color: @bg;
+}
+
+tooltip label {
+    color: @text;
+}
+
+#custom-arch {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+#window {
+    margin-left: 15px;
+}
+
+#workspaces button {
+    color: @text;
+    box-shadow: none;
+    border: none;
+}
+
+#workspaces button.active {
+    border-radius: 0;
+    color: @highlight;
+    background: none;
+}
+
+#workspaces button:hover {
+    background: @highlight;
+    color: @bg;
+    border-top: 3px solid @highlight;
+    border-bottom: 3px solid @highlight;
+    border-radius: 0;
+    text-shadow: none;
+}
+
+#cpu {
+    margin-right: 20px;
+}
+
+#idle_inhibitor,
+#wireplumber,
+#language {
+    color: @text;
+}
+
+#idle_inhibitor.deactivated,
+#wireplumber.muted {
+    color: @inactive;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#battery.warning {
+    color: @warning;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #26A65B;
+}
+
+#custom-poweroff {
+    font-size: 18px;
+    margin-right: 20px;
+    color: @red;
+}
+
+#custom-reboot {
+    font-size: 13px;
+    margin-right: 10px;
+    color: @red;
+}
+
+#custom-lock {
+    font-size: 13px;
+    margin-right: 10px;
+    color: @red;
+}

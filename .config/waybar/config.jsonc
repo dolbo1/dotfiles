@@ -1,0 +1,196 @@
+// -*- mode: jsonc -*-
+// FontAwesome &  JetBrains Mono required
+{
+    "name": "bar",
+    "layer": "bottom",
+    "position": "top",
+    "height": 40,
+    "spacing": 20,
+    "margin-top": 10,
+    "margin-left": 20,
+    "margin-right": 20,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "custom/arch",
+        "hyprland/window",
+        "hyprland/workspaces"
+        // "group/usage",
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "bluetooth",
+        "wireplumber",
+        "hyprland/language",
+        "network",
+        "battery",
+        "custom/notification",
+        "group/power"
+    ],
+    // Modules configuration
+    // Right modules
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "hyprsysteminfo"
+    },
+    "hyprland/window": {
+        "format": "{class}",
+        "tooltip": false,
+        "icon": false,
+        "swap-icon-label": false,
+        "rewrite": {
+            "": "hyprland"
+        }
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V"
+        }
+    },
+    /*
+    "group/usage": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true,
+            "click-to-reveal": true,
+            "children-class": "usage-child"
+        },
+        "modules": [
+            "custom/usage-icon",
+            "cpu",
+            "memory"
+        ]
+    },
+    "custom/usage-icon": {
+        "format": "  ",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "|  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 5,
+        "format": " {percentage}%",
+        "format-alt": " {used} GiB",
+        "tooltip": false
+    },
+    */
+    // Center modules
+    "clock": {
+        "format": "{:%A, %B %d :// %H:%M}",
+        "format-alt": "{:%A, %B, %d :// %H:%M:%S}",
+        "interval": 1,
+        "tooltip": false
+    },
+    // Right modules
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
+    },
+    "bluetooth": {
+        "format": "",
+        "format-connected": "",
+        "tooltip-format-connected": "{device_alias}"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false,
+        "max-volume": 100.0
+    },
+    "hyprland/language": {
+        "format-en": " EN",
+        "format-ru": " РУ"
+    },
+    "network": {
+        "format-ethernet": " ",
+        "format-wifi": " ",
+        "format-disconnected": " ",
+        "tooltip": true,
+        "tooltip-format-wifi": " {essid}"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "format": "{icon}",
+        "format-alt": "{icon}{capacity}%",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
+        "states": {
+            "warning": 30,
+            "critical": 20
+        },
+        "tooltip": false
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "none": "",
+            "notification": "!",
+            "dnd-none": "",
+            "dnd-notification": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "group/power": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/poweroff",
+            "custom/lock",
+            "custom/reboot"
+        ],
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+            "children-class": "power-child"
+        }
+    },
+    "custom/poweroff": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "systemctl poweroff"
+    },
+    "custom/reboot": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/lock": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    }
+}

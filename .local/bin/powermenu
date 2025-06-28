@@ -1,0 +1,14 @@
+#!/bin/bash
+# -p: prompt, -l: lines, -i: case-insensitive
+# height is 0 to make the window smaller due to only having 3 options
+
+choice=$(echo -en "Shutdown\0icon\x1fsystem-shutdown
+Restart\0icon\x1fsystem-restart
+Log Out\0icon\x1fsystem-log-out" | rofi -p " Power" -dmenu -l 3 -i -theme-str 'window { height: 0; }')
+
+case "$choice" in
+	"Shutdown") poweroff ;;
+	"Restart") reboot ;;
+	"Log Out") hyprctl dispatch exit ;;
+	*) exit 0 ;;
+esac

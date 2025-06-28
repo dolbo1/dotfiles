@@ -1,0 +1,41 @@
+window {
+	background: #282828;
+	border: none;
+	border: 3px solid #D6A340;
+	border-radius: 5px;
+}
+
+#box {
+	/* Define attributes of the box surrounding icons here */
+	padding: 10px
+}
+
+#active {
+	border-bottom: 10px solid rgba(255, 255, 255, 1.0);
+}
+
+button,
+image {
+	background: none;
+	border-style: none;
+	box-shadow: none;
+	color: #999;
+}
+
+button {
+	padding: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-bottom: -4px;
+	color: #eee;
+	font-size: 12px
+}
+
+button:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: 3px;
+}
+
+button:focus {
+	box-shadow: none;
+}

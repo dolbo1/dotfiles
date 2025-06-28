@@ -1,0 +1,3 @@
+mainbox {
+    children: [inputbar, message, listview ];
+}

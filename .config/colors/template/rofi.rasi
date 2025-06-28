@@ -1,0 +1,9 @@
+* {
+    // Variables
+    bg: #;
+    bgdark: #;
+    highlight: #;
+    highlightdark: #;
+    text: #;
+    inactivetext: #;
+}

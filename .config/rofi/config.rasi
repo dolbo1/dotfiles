@@ -1,0 +1,40 @@
+configuration {
+    modes: "run,drun,window";
+    show-icons: true;
+    icon-theme: "Tela-yellow-dark";
+    drun-display-format: "{name}";
+    disable-history: true;
+    case-sensitive: false;
+    scroll-method: 1;
+    cycle: false;
+    normal-window: false;
+    sidebar-mode: true; // enables bottom mode switcher
+    kb-element-next: ""; // Disable scrolling through apps with Tab
+    kb-element-prev: ""; // ^^^
+    kb-mode-next: "Tab"; // Scroll through sidebar with Tab
+    kb-mode-previous: "ISO_Left_Tab"; // shift+tab ^^^
+    window-format: "{t}";
+
+    run {
+        display-name: " Run";
+    }
+
+    drun {
+        // display-name: " Apps";
+        display-name: " Apps";
+        parse-user: true;
+        parse-system: false;
+    }
+
+    window {
+        display-name: " Windows";
+        prefer-icon-theme: true;
+        close-on-delete: false;
+    }
+
+    calc {
+        display-name: "󰪚 Calc";
+    }
+}
+
+@theme "custom-theme"

@@ -1,0 +1,144 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "builtin",
+    "source": "30",
+    "color": {
+      "1": "light_yellow",
+      "2": "light_yellow"
+    },
+    "padding": {
+      "top": 2,
+      "left": 3 
+    }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "key": "$",
+      "keyColor": "bright_green",
+      "format": "{user-name}@{host-name}",
+      "outputColor": "bright_green"
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": " ",
+      "keyColor": "yellow",
+      "outputColor": "bright_light_yellow",
+      "format": "OS"
+    },
+    {
+      "type": "os",
+      "key": "├  ",
+      "keyColor": "light_yellow",
+      "format": "{name}"
+    },
+    {
+      "type": "kernel",
+      "key": "├  ",
+      "keyColor": "light_yellow",
+      "format": "{release}"
+    },
+    {
+      "type": "packages",
+      "key": "├  ",
+      "keyColor": "light_yellow",
+      "format": "{all}"
+    },
+    {
+      "type": "processes",
+      "key": "└ 󰙵 ",
+      "keyColor": "light_yellow",
+      "format": "{result}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "outputColor": "bright_yellow",
+      "format": "WM"
+    },
+    {
+      "type": "wm",
+      "key": "├  ",
+      "keyColor": "yellow",
+      "format": "{pretty-name}" 
+    },
+    {
+      "type": "shell",
+      "key": "├  ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "terminal",
+      "key": "├  ",
+      "keyColor": "yellow",
+      "format": "{process-name}"
+    },
+    {
+      "type": "terminalfont",
+      "key": "├ 󰊄 ",
+      "keyColor": "yellow",
+      "format": "{name} {size}pt"
+    },
+    {
+      "type": "editor",
+      "key": "└  ",
+      "keyColor": "yellow",
+      "format": "{name}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": " ",
+      "outputColor": "bright_light_red",
+      "format": "PC"
+    },
+    {
+      "type": "cpu",
+      "key": "├  ",
+      "keyColor": "red",
+      "format": "{name}"
+    },
+    {
+      "type": "gpu",
+      "key": "├ 󰢮 ",
+      "keyColor": "red",
+      "format": "{type} {name}"
+    },
+    {
+      "type": "memory",
+      "key": "├  ",
+      "keyColor": "red",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "key": "├ 󰋊 ",
+      "keyColor": "red",
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    {
+      "type": "uptime",
+      "key": "└ 󰥔 ",
+      "keyColor": "red",
+      "format": "{hours} hrs, {minutes} min, {seconds} sec"
+    },
+    "break",
+    /*
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "paddingLeft": 1
+    }
+    */
+    {
+        "type": "custom",
+        "format": " {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39} "
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+* {
+    // Variables
+    bg: #32302f;
+    bgdark: #252423;
+    highlight: #e9b143;
+    highlightdark: #c69431;
+    text: #fff;
+    inactivetext: #7c6f64;
+}

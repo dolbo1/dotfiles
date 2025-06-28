@@ -1,0 +1,128 @@
+@import "/home/aliaks/.config/colors/gruvbox/rofi.rasi"
+
+* {
+    background-color: @bg;
+    font: "JetBrainsMonoNL NF 16";
+    text-transform: bold;
+}
+
+window {
+    border-radius: 3px;
+    width: 33%;
+    height: 67%;
+    background-color: @bg;
+    border: 3px;
+    border-color: @highlight;
+}
+
+mainbox {
+    padding: 20px;
+    background-color: @bg;
+}
+
+//////////////
+// INPUTBAR //
+//////////////
+
+inputbar {
+    margin: 0px 0px 20px;
+    padding: 5px;
+    border-radius: 3px;
+    font: "JetBrainsMonoNL NF 20";
+    text-transform: bold;
+    children: [ prompt, entry ];
+}
+
+// Text preceding the search bar
+prompt {
+    enabled: true;
+    text-color: @text;
+    vertical-align: 0.5;
+    margin: 0px 10px 0px 0px; // top right bottom left
+    padding: 10px;
+    border-radius: 3px;
+    background-color: @highlightdark;
+    font: "JetBrainsMonoNL NF 18";
+    text-transform: inherit;
+}
+
+// Search bar
+entry {
+    placeholder: "";
+    cursor-width: 2px;
+    background-color: @bgdark;
+    padding: 10px;
+    margin: 0px;
+    bottom-margin: 100px;
+    text-color: @text;
+    blink: false;
+    border-radius: 3px;
+    text-transform: inherit;
+    vertical-align: 0.5;
+}
+
+// Disabled to remove white box on search bar end
+case-indicator {
+    enabled: false;
+}
+
+//////////////
+// LISTVIEW //
+//////////////
+
+listview {
+    scrollbar: false;
+    fixed-height: true;
+    lines: 7;
+}
+
+// Add icons in addition to element text
+element {
+    orientation: horizontal;
+    spacing: 20px;
+    padding: 10px;
+    background-color: @bg;
+    border-radius: 3px;
+}
+
+element-icon {
+    size: 1.4em;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: @text;
+    highlight: underline;
+
+}
+
+// element.selected, element-text.selected, element-icon.selected {
+//     background-color: @highlightdark;
+// }
+element-text.selected {
+    text-color: @highlight;
+}
+
+/////////////
+// MESSAGE //
+/////////////
+
+textbox {
+    text-color: @text;
+}
+
+///////////////////
+// MODE SWITCHER //
+///////////////////
+
+mode-switcher {
+    enabled: true;
+}
+
+button {
+    text-color: @inactivetext;
+}
+
+button.selected {
+    text-color: @text;
+}
