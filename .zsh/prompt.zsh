@@ -23,6 +23,8 @@ chpwd () {  # Run on cd
 precmd() {
     if [[ $inGitDirectory == true ]]; then
         updateGitStatus
+    else
+        git_status=""
     fi
     setPrompt
 }
