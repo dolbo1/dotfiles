@@ -18,11 +18,12 @@ alias l='ls -lA'
 alias mkiso='sudo mkarchiso -v -w /home/aliaks/iso/buseOS-src/output -o /home/aliaks/iso /home/aliaks/iso/buseOS-src'
 alias .df='cd $HOME/.dotfiles'
 alias turnip='mpvpaper -o "--loop-file" ALL /home/aliaks/Videos/turnip.mp4'
+alias aliases='nvim ~/.dotfiles/aliases.zsh'
+alias gs='git status'
 
 # Directories & Configs
 alias hypr='cd /home/aliaks/.config/hypr'
 alias hyprconf='hypr && nvim hyprland.conf'
-alias aliases='nvim $ZSH_CUSTOM/aliases.zsh'
 alias nconf='cd ~/.config/nvim'
 alias nconfplug='cd ~/.config/nvim/lua/plugins'
 alias buseos='cd ~/iso/buseOS-src'
