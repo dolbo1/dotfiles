@@ -58,37 +58,6 @@
             "5": "V"
         }
     },
-    /*
-    "group/usage": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 500,
-            "transition-left-to-right": true,
-            "click-to-reveal": true,
-            "children-class": "usage-child"
-        },
-        "modules": [
-            "custom/usage-icon",
-            "cpu",
-            "memory"
-        ]
-    },
-    "custom/usage-icon": {
-        "format": "  ",
-        "tooltip": false
-    },
-    "cpu": {
-        "interval": 5,
-        "format": "|  {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "interval": 5,
-        "format": " {percentage}%",
-        "format-alt": " {used} GiB",
-        "tooltip": false
-    },
-    */
     // Center modules
     "clock": {
         "format": "{:%A, %B %d :// %H:%M}",
