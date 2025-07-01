@@ -10,8 +10,8 @@
   //   }
   // },
   "logo": {
-    "type": "auto",
-    "source": "/home/aliaks/Downloads/mcqueen-fly-nobg.png",
+    "type": "kitty-direct",
+    "source": "/home/aliaks/Pictures/mcqueen-fly-nobg.png",
     "width": 50,
     "padding": {
       "top": 5,
