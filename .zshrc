@@ -16,6 +16,7 @@ export PATH=/home/aliaks/.local/bin:$PATH
 # plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # prompt
 source ~/.zsh/prompt.zsh
