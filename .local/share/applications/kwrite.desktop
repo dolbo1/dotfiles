@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=false
+Exec=kwrite %f
+Name=KWrite
+Comment=Custom definition for kwrite
+Icon=kwrite

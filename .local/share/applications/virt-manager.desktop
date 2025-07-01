@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=false
+Exec=/usr/bin/virt-manager
+Name=Virtual Machine Manager
+Icon=virt-manager
