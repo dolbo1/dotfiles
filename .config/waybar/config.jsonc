@@ -104,7 +104,8 @@
         "format-wifi": " ",
         "format-disconnected": " ",
         "tooltip": true,
-        "tooltip-format-wifi": " {essid}"
+        "tooltip-format-wifi": " {essid}",
+        "tooltip-format-ethernet": " Ethernet"
     },
     "battery": {
         "bat": "BAT0",
