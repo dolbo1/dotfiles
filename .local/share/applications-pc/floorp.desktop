@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=false
+# Exec=/usr/lib/floorp/floorp %u
+Exec=/usr/bin/floorp
+Name=Floorp
+Comment=Custom definition for Floorp
+Icon=floorp
