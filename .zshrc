@@ -8,7 +8,7 @@ compinit
 promptinit
 
 # aliases
-source ~/.dotfiles/aliases.zsh
+source ~/.dotfiles/.zsh/aliases.zsh
 
 # local binaries (scripts)
 export PATH=/home/aliaks/.local/bin:$PATH
