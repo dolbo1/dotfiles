@@ -18,7 +18,7 @@ alias l='ls -lA'
 alias mkiso='sudo mkarchiso -v -w /home/aliaks/iso/buseOS-src/output -o /home/aliaks/iso /home/aliaks/iso/buseOS-src'
 alias .df='cd $HOME/.dotfiles'
 alias turnip='mpvpaper -o "--loop-file" ALL /home/aliaks/Videos/turnip.mp4'
-alias aliases='nvim ~/.dotfiles/aliases.zsh'
+alias aliases='nvim ~/.dotfiles/.zsh/aliases.zsh'
 alias gs='git status'
 
 # Directories & Configs
