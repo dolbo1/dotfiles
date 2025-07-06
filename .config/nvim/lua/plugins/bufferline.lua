@@ -29,12 +29,31 @@ return {
         color_icons = true,
         show_buffer_icons = true,
         show_buffer_close_icons = true,
-        show_close_icon = true,
-        separator_style = 'thin',
+        show_close_icon = false,
+        -- separator_style = 'thin',
+        separator_style = { '│', '│' },
         enforce_regular_tabs = true,
         always_show_bufferline = true,
         auto_toggle_bufferline = false,
         sort_by = 'insert_at_end',
+      },
+      highlights = {
+        fill = {
+          bg = '#32302f',
+        },
+        background = {
+          bg = '#32302f',
+        },
+        separator = {
+          fg = '#504945',
+          bg = '#32302f',
+        },
+        close_button = {
+          bg = '#32302f',
+        },
+        modified = {
+          bg = '#32302f',
+        },
       },
     })
   end,
