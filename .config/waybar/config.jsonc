@@ -42,7 +42,9 @@
         "icon": false,
         "swap-icon-label": false,
         "rewrite": {
-            "": "hyprland"
+            "": "hyprland",
+            "org.inkscape.Inkscape": "Inkscape",
+            "org.prismlauncher.PrismLauncher": "Prism Launcher"
         }
     },
     "hyprland/workspaces": {
