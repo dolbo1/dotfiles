@@ -1,5 +1,33 @@
 #!/bin/bash
 
+if [[ ! $1 ]]; then
+    echo "ERROR: No binary specified."
+    exit 1
+elif [[ $1 == "--help" || $1 == "-h" ]]; then
+    echo "Usage: newapp [binary name] [app name] [icon name]"
+    echo ""
+    echo "Binary name:"
+    echo "      The file name of the executable. DO NOT include /usr/bin/. Just the name is fine."
+    echo "      i.e. for a shortcut to '/usr/bin/prismlauncher', just enter 'prismlauncher' as the binary name."
+    echo "      -This will also be used for the app name and icon name, if they are not specified."
+    echo ""
+    echo "App name (optional):"
+    echo "      Name which will be used as the name in the shortcut. This will be the name displayed in menus."
+    echo "      Please use double-quotes if the name contains spaces."
+    echo "      -If not specified, the binary name will be used, with the first letter capitalized."
+    echo ""
+    echo "Icon name (optional):"
+    echo "      The name of the icon to be used in the shortcut. This is useful if you know the binary's icon will not be found in system files."
+    echo "      i.e. the name of the Prism Launcher icon is actually 'org.prismlauncher.PrismLauncher', not 'prismlauncher'."
+    echo "      -If not specified, the binary name will be used."
+    exit 0
+fi
+
+if [[ ! -f "/usr/bin/$1" ]]; then
+    echo "ERROR: Non-existant binary."
+    exit 1
+fi
+
 NEW_SHORTCUT=""
 NEW_SHORTCUT+="[Desktop Entry]\n"
 NEW_SHORTCUT+="Encoding=UTF-8\n"
@@ -7,6 +35,20 @@ NEW_SHORTCUT+="Version=1.0\n"
 NEW_SHORTCUT+="Type=Application\n"
 NEW_SHORTCUT+="NoDisplay=false\n"
 NEW_SHORTCUT+="Exec=/usr/bin/$1\n"
-NEW_SHORTCUT+="Name=${1^}\n"
-NEW_SHORTCUT+="Icon=$1"
+
+# If app name specified, use that, else use binary name
+if [[ $2 ]]; then
+    NEW_SHORTCUT+="Name=$2\n"
+else
+    NEW_SHORTCUT+="Name=${1^}\n"
+fi
+
+# If icon specified, use that, else use binary name
+if [[ $3 ]]; then
+    NEW_SHORTCUT+="Icon=$3"
+else
+    NEW_SHORTCUT+="Icon=$1"
+fi
+
 echo -e "$NEW_SHORTCUT" > "$HOME/.local/share/applications/$1.desktop"
+exit 0
