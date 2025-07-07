@@ -19,13 +19,13 @@ vim.o.ignorecase = true -- Search is case insensitive unless /C or capital in se
 vim.o.smartcase = true -- Goes with ignore case
 vim.o.signcolumn = 'yes'
 vim.o.updatetime = 250 -- Shorten update time
-vim.o.whichwrap = 'bs<>[]hl' -- which "horizontal" keys are allowed to travel to prev/next line
+-- vim.o.whichwrap = 'bs<>[]hl' -- which "horizontal" keys are allowed to travel to prev/next line
 vim.o.splitright = true -- Horizontal splits will always happen to the right
 vim.o.splitbelow = true -- Vertical splits will always happen on the bottom
 vim.o.list = true -- Shows whitespace characters
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } -- Modifies displayed whitespace characters
 vim.o.inccommand = 'split'
-vim.o.cursorline = true -- Current line is highlighted entirely
+-- vim.o.cursorline = true -- Current line is highlighted entirely
 vim.o.scrolloff = 10 -- N lines should be shown when scrolling
 vim.o.confirm = true -- Present a confirmation window when exiting a non-saved buffer
 vim.o.showtabline = 2
