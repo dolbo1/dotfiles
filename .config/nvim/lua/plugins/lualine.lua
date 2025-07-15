@@ -33,6 +33,10 @@ return {
       path = 0,
     }
 
+    local function time()
+      return ' ' .. os.date('%H:%M')
+    end
+
     require('lualine').setup({
       options = {
         icons_enabled = true,
@@ -58,8 +62,8 @@ return {
         lualine_b = { 'branch', diff },
         lualine_c = { filename },
         lualine_x = { diagnostics, 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' },
+        lualine_y = { 'location' },
+        lualine_z = { time },
       },
       inactive_sections = {
         lualine_a = {},
