@@ -26,10 +26,11 @@ tooltip label {
 #custom-arch {
     margin-left: 15px;
     font-size: 1.5rem;
+    padding-right: 6px;
 }
 
 #window {
-    margin-left: 15px;
+    margin-left: 5px;
 }
 
 #workspaces button {
