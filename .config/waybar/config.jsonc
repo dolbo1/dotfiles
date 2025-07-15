@@ -12,9 +12,8 @@
     "reload_style_on_change": true,
     "modules-left": [
         "custom/arch",
-        "hyprland/window",
-        "hyprland/workspaces"
-        // "group/usage",
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -42,9 +41,11 @@
         "icon": false,
         "swap-icon-label": false,
         "rewrite": {
-            "": "hyprland",
-            "org.inkscape.Inkscape": "inkscape",
-            "org.prismlauncher.PrismLauncher": "prismlauncher"
+            "": "󰍹 Desktop",
+            "org.inkscape.Inkscape": "󰏘 Inkscape",
+            "org.prismlauncher.PrismLauncher": "󰆧 Prism Launcher",
+            "floorp": "󰈹 Floorp",
+            "kitty": " Kitty"
         }
     },
     "hyprland/workspaces": {
