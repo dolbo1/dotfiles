@@ -10,6 +10,7 @@ alias tk='nvim ~/Documents/.token'
 alias c=clear
 alias a='clear && ./a.out'
 alias buds='rfcomm connect rfcomm0 34:E3:FB:0C:16:01 && bluetoothctl connect 34:E3:FB:0C:16:01'
+alias headset='rfcomm connect rfcomm0 AC:80:0A:6F:E1:13 && bluetoothctl connect AC:80:0A:6F:E1:13'
 alias bt=bluetoothctl
 alias btd='bluetoothctl disconnect'
 alias vpn='adguardvpn-cli'
