@@ -34,7 +34,7 @@
     "custom/arch": {
         "format": "󰣇",
         "tooltip": false,
-        "on-click": "hyprsysteminfo"
+        "on-click": "rofi -show drun"
     },
     "hyprland/window": {
         "format": "{class}",
@@ -43,8 +43,8 @@
         "swap-icon-label": false,
         "rewrite": {
             "": "hyprland",
-            "org.inkscape.Inkscape": "Inkscape",
-            "org.prismlauncher.PrismLauncher": "Prism Launcher"
+            "org.inkscape.Inkscape": "inkscape",
+            "org.prismlauncher.PrismLauncher": "prismlauncher"
         }
     },
     "hyprland/workspaces": {
