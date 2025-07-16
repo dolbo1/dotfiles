@@ -36,16 +36,18 @@
         "on-click": "rofi -show drun"
     },
     "hyprland/window": {
-        "format": "{class}",
+        "format": "{initialTitle}",
         "tooltip": false,
         "icon": false,
         "swap-icon-label": false,
         "rewrite": {
-            "": "󰍹 Desktop",
+            "": "󰇄 Desktop",
             "org.inkscape.Inkscape": "󰏘 Inkscape",
             "org.prismlauncher.PrismLauncher": "󰆧 Prism Launcher",
-            "floorp": "󰈹 Floorp",
-            "kitty": " Kitty"
+            "Ablaze Floorp": "󰈹 Floorp",
+            "kitty": "󰆍 Kitty",
+            "steam": " Steam",
+            "spotify": " Spotify"
         }
     },
     "hyprland/workspaces": {
