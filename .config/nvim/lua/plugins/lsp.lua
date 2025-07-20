@@ -214,6 +214,7 @@ return {
       css_variables = {},
       cssmodules_ls = {},
       dockerls = {},
+      eslint_d = {},
       hyprls = {},
       jdtls = {},
       jsonls = {},
