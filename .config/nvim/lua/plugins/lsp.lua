@@ -207,7 +207,6 @@ return {
       --
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       ts_ls = {},
-
       bashls = {},
       html = {},
       cssls = {},
@@ -220,7 +219,6 @@ return {
       jsonls = {},
       markdown_oxide = {},
       pylsp = {},
-
       lua_ls = {
         -- cmd = { ... },
         -- filetypes = { ... },
@@ -281,6 +279,10 @@ return {
           })
         end,
       },
+    })
+
+    require('lspconfig').qmlls.setup({
+      cmd = { 'qmlls6', '-E' },
     })
   end,
 }
