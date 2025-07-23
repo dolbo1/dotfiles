@@ -8,7 +8,7 @@ configuration {
     scroll-method: 1;
     cycle: false;
     normal-window: false;
-    sidebar-mode: true; // enables bottom mode switcher
+    // sidebar-mode: true; // enables bottom mode switcher
     kb-element-next: ""; // Disable scrolling through apps with Tab
     kb-element-prev: ""; // ^^^
     kb-mode-next: "Tab"; // Scroll through sidebar with Tab
