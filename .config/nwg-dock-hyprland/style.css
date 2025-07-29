@@ -1,18 +1,16 @@
 window {
-	background: #282828;
-	border: none;
-	border: 3px solid #D6A340;
-	border-radius: 5px;
+	background: transparent;
 }
 
 #box {
 	/* Define attributes of the box surrounding icons here */
-	padding: 10px
+	background: #252423;
+	padding: 10px;
+	border: 3px solid #e9b143;
+	border-radius: 10px;
 }
 
-#active {
-	border-bottom: 10px solid rgba(255, 255, 255, 1.0);
-}
+/* #active {} */
 
 button,
 image {
@@ -33,7 +31,7 @@ button {
 
 button:hover {
 	background-color: rgba(255, 255, 255, 0.15);
-	border-radius: 3px;
+	border-radius: 10px;
 }
 
 button:focus {
