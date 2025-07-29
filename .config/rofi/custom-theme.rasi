@@ -98,7 +98,7 @@ element-text {
 }
 
 element.selected, element-text.selected, element-icon.selected {
-    background-color: @bg;
+    background-color: #3c3836;
     text-color: @text;
 }
 
