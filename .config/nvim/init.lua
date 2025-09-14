@@ -26,7 +26,6 @@ require('lazy').setup({
   require('plugins.autotag'),
   require('plugins.bufferline'), -- Top buffer bar
   require('plugins.colorizer'), -- Highlight colors
-  require('plugins.comment'), -- Automated comment options
   require('plugins.guess-indent'), -- Auto-adjust indentation in files
   require('plugins.indent-blankline'), -- Add line indicators for indentation
   require('plugins.lazydev'), -- LSP Config for Neovim config files
