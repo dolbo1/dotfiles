@@ -1,5 +1,5 @@
 configuration {
-    modes: "run,drun,window";
+    modes: "drun,calc";
     show-icons: true;
     icon-theme: "Tela-yellow-dark";
     drun-display-format: "{name}";
