@@ -11,6 +11,7 @@ echo "
 Current themes include:
 - Gruvbox
 - Retrowave
+- Christmas
 (CTRL + C or 'quit' to quit)
 "
 
@@ -41,8 +42,12 @@ if [[ -d "$WORK_DIR/${COLORSCHEME,,}" ]]; then
    sed -i "1 s|.*|source = $FILEPATH/hypr.conf|" "$HOME/.config/hypr/hyprlock.conf" | grep -i "source" # ,, creates lowercase string
 
    # Waybar
-   echo "Updating Waybar stylesheet..."
-   sed -i "2 s|.*|@import url("\"$FILEPATH/waybar.css\"");|" "$HOME/.config/waybar/style.css" | grep -i "@import" # ,, creates lowercase string
+   echo "Replacing AGS colors stylesheet..."
+   cp -f "$FILEPATH/ags-colors.scss" "$HOME/.config/ags/style/colors.scss"
+   # sed -i "2 s|.*|@import url("\"$FILEPATH/waybar.css\"");|" "$HOME/.config/waybar/style.css" | grep -i "@import" # ,, creates lowercase string
+   echo "Restarting AGS..."
+   ags quit
+   ags run & disown
 
    # Rofi
    echo "Updating Rofi stylesheet..."
