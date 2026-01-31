@@ -6,4 +6,5 @@
     highlightdark: #c69431;
     text: #fff;
     inactivetext: #7c6f64;
+    applabel: #c69431;
 }

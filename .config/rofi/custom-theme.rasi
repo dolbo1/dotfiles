@@ -43,7 +43,7 @@ prompt {
     margin: 0px 10px 0px 0px; // top right bottom left
     padding: 10px;
     border-radius: @rounding;
-    background-color: @highlightdark;
+    background-color: @applabel;
     font: "JetBrainsMonoNL NF 18";
     text-transform: inherit;
 }
